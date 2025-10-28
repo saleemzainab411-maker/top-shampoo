@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Top Shampoo</title>
+			<meta name="description" content="Top Shampoo — natural, gentle, and effective shampoo for shiny, healthy hair. Explore benefits, ingredients, and reviews." />
+			<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+			<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23ff9a9e'/%3E%3Ctext x='50' y='62' font-size='50' text-anchor='middle' font-family='Poppins,Arial' fill='%23fff'%3ET%3C/text%3E%3C/svg%3E">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="#">Top Shampoo</a>
+				<nav class="nav" id="nav">
+					<a href="#features">Features</a>
+					<a href="#ingredients">Ingredients</a>
+					<a href="#reviews">Reviews</a>
+					<a href="#contact" class="btn small">Buy Now</a>
+				</nav>
+				<button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+			</div>
+		</header>
+
+		<main>
+					<section class="hero reveal">
+				<div class="container hero-inner">
+					<div class="hero-copy">
+							<h1 class="headline">Top Shampoo — Clean + Shine</h1>
+						<p class="lead">Nature-powered shampoo that gently cleanses, strengthens, and adds radiant shine without harsh chemicals.</p>
+						<ul class="hero-points">
+							<li>Paraben & sulfate free</li>
+							<li>Botanical extracts</li>
+							<li>Eco-friendly packaging</li>
+						</ul>
+						<div class="hero-ctas">
+							<a href="#contact" class="btn primary">Buy Now — $12.99</a>
+							<a href="#features" class="btn ghost">See Benefits</a>
+						</div>
+					</div>
+					<div class="hero-media">
+						<!-- Decorative product card -->
+						<div class="product-card" aria-hidden="true">
+							<svg class="bottle" viewBox="0 0 200 400" xmlns="http://www.w3.org/2000/svg" role="img">
+								<defs>
+									<linearGradient id="g1" x1="0" x2="1">
+										<stop offset="0%" stop-color="#ffd8a8"/>
+										<stop offset="100%" stop-color="#ff9a9e"/>
+									</linearGradient>
+								</defs>
+								<rect x="36" y="40" width="128" height="300" rx="24" fill="url(#g1)" />
+							<rect x="76" y="8" width="48" height="40" rx="10" fill="#fff" />
+							<text x="100" y="210" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="600" font-size="22" fill="#6b2a5a">Top</text>
+						</svg>
+						</div>
+					</div>
+				</div>
+			</section>
+
+					<section id="features" class="section features reveal">
+				<div class="container">
+					<h2>Why choose Top Shampoo?</h2>
+					<p class="section-sub">A gentle formula designed for all hair types that focuses on strength, shine, and scalp health.</p>
+					<div class="cards">
+						<article class="card">
+							<h3>Deep Cleansing</h3>
+							<p>Removes buildup and restores natural oils without stripping hair.</p>
+						</article>
+						<article class="card">
+							<h3>Strength & Repair</h3>
+							<p>Proteins and botanicals to reduce breakage and split ends.</p>
+						</article>
+						<article class="card">
+							<h3>Natural Shine</h3>
+							<p>Lightweight conditioning for a smooth, glossy finish.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+					<section id="ingredients" class="section ingredients reveal">
+				<div class="container two-col">
+					<div>
+						<h2>Key Ingredients</h2>
+						<p>Carefully selected ingredients that work together to nourish hair and scalp.</p>
+						<ul class="ingredients-list">
+							<li><strong>Aloe Vera</strong> — soothes and hydrates the scalp.</li>
+							<li><strong>Keratin</strong> — reinforces hair structure and reduces breakage.</li>
+							<li><strong>Argan Oil</strong> — adds shine without greasiness.</li>
+						</ul>
+					</div>
+					<div class="ingredients-visual">
+						<div class="pill">Paraben free</div>
+						<div class="pill">Sulfate free</div>
+						<div class="pill">Cruelty free</div>
+						<div class="pill">Recyclable</div>
+					</div>
+				</div>
+			</section>
+
+					<section id="reviews" class="section reviews reveal">
+				<div class="container">
+					<h2>What customers say</h2>
+					<div class="testimonials">
+						<blockquote class="testim">"My hair has never been this soft — this shampoo is a game changer!"<cite>— Amina</cite></blockquote>
+						<blockquote class="testim">"Clean ingredients and great results. Bought two more for family."<cite>— Husain</cite></blockquote>
+						<blockquote class="testim">"Light scent, strong performance. Worth every penny."<cite>— Sara</cite></blockquote>
+					</div>
+				</div>
+			</section>
+
+					<section id="contact" class="section contact reveal">
+				<div class="container two-col">
+					<div>
+						<h2>Get your bottle</h2>
+						<p>Order now — ships worldwide. Fill the form and we'll email your receipt and tracking info.</p>
+						<form id="orderForm" class="form">
+							<label>Full name <input name="name" required></label>
+							<label>Email <input name="email" type="email" required></label>
+							<label>Address <input name="address" required></label>
+							<div class="form-row">
+								<label>Quantity <input name="qty" type="number" min="1" value="1"></label>
+								<label>Variant
+									<select name="variant">
+										<option>Regular (250ml)</option>
+										<option>Travel (100ml)</option>
+									</select>
+								</label>
+							</div>
+							<button class="btn primary" type="submit">Place Order</button>
+							<p id="orderMsg" class="order-msg" aria-live="polite"></p>
+						</form>
+					</div>
+					<aside>
+						<h3>Why order from us?</h3>
+						<ul>
+							<li>Fast shipping</li>
+							<li>Secure payments</li>
+							<li>30-day satisfaction guarantee</li>
+						</ul>
+					</aside>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+		<div class="container footer-inner">
+					<div>© <span id="year"></span> Top Shampoo — All rights reserved.</div>
+					<div class="socials">Follow us: <a href="#">tiktok</a> • <a href="#">Facebook</a></div>
+				</div>
+		</footer>
+
+		<script src="scripts.js" defer></script>
+	</body>
+</html>

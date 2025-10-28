@@ -1,0 +1,91 @@
+/* styles.css — simple, modern styling for the Shampo page */
+:root{
+  --bg:#fff7fb;
+  --accent1:#ff9a9e;
+  --accent2:#ffd8a8;
+  --ink:#2b2b2b;
+  --muted:#6b6b6b;
+  --container:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(1200px 500px at 10% 10%, rgba(255,154,158,0.08), transparent 8%), radial-gradient(900px 360px at 90% 85%, rgba(255,216,168,0.06), transparent 10%), linear-gradient(180deg,#fff 0%,#fff7fb 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  scroll-behavior:smooth;
+}
+.container{max-width:var(--container);margin:0 auto;padding:24px}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{font-weight:700;color:#6b2a5a;text-decoration:none;font-size:1.25rem}
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:var(--ink);text-decoration:none;padding:8px}
+.nav a.btn.small{background:#fff;color:#6b2a5a;border-radius:8px;padding:8px 12px;border:1px solid rgba(107,42,90,0.06)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.2rem}
+
+/* Hero */
+.hero{padding:56px 0}
+.hero-inner{display:flex;gap:28px;align-items:center}
+.hero-copy{flex:1}
+.hero-copy h1{font-size:2.2rem;margin:0 0 12px}
+.lead{color:var(--muted);margin:0 0 16px}
+.hero-points{display:flex;gap:12px;list-style:none;padding:0;margin:12px 0}
+.hero-points li{background:linear-gradient(90deg,var(--accent2),var(--accent1));padding:8px 12px;border-radius:999px;color:#4a0020;font-weight:600;font-size:0.88rem}
+.hero-ctas{margin-top:18px;display:flex;gap:12px}
+.btn{display:inline-block;text-decoration:none;padding:10px 18px;border-radius:12px;border:1px solid transparent}
+.btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#3b0722;font-weight:700}
+.btn.ghost{background:transparent;border:1px solid rgba(107,42,90,0.08);color:var(--ink)}
+
+.hero-media{width:320px;display:flex;justify-content:center;position:relative}
+.hero::before{content:'';position:absolute;left:0;top:0;width:60%;height:100%;background:radial-gradient(closest-side, rgba(255,154,158,0.08), transparent);pointer-events:none;transform:translateX(-10%)}
+.product-card{width:260px;height:380px;background:linear-gradient(180deg,rgba(255,255,255,0.92),rgba(255,250,250,0.86));backdrop-filter:blur(6px);border-radius:28px;display:flex;align-items:center;justify-content:center;box-shadow:0 18px 45px rgba(107,42,90,0.14);transform:rotate(-6deg);transition:transform 400ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms}
+.product-card:hover{transform:rotate(-2deg) translateY(-8px) scale(1.02);box-shadow:0 30px 60px rgba(107,42,90,0.18)}
+.product-card{animation:float 6s ease-in-out infinite}
+.bottle{width:180px;height:auto;filter:drop-shadow(0 8px 18px rgba(107,42,90,0.08))}
+
+@keyframes float{0%{transform:rotate(-6deg) translateY(0)}50%{transform:rotate(-4deg) translateY(-8px)}100%{transform:rotate(-6deg) translateY(0)}}
+
+/* sections */
+.section{padding:48px 0}
+.features .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(107,42,90,0.05)}
+.card h3{margin:0 0 8px}
+
+.card{transition:transform 300ms ease, box-shadow 300ms ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(107,42,90,0.08)}
+
+.two-col{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start}
+.ingredients-visual{display:flex;flex-wrap:wrap;gap:10px}
+.pill{background:linear-gradient(90deg,var(--accent2),#fff);padding:10px 14px;border-radius:999px;font-weight:600}
+
+.reviews .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
+.testim{background:linear-gradient(180deg,#fff,#fff7fd);padding:16px;border-radius:12px;border-left:4px solid rgba(107,42,90,0.08)}
+.testim cite{display:block;margin-top:8px;font-size:0.86rem;color:var(--muted)}
+
+.testim{transition:transform 300ms ease, box-shadow 300ms ease}
+.testim:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(107,42,90,0.06)}
+
+.contact .form{display:flex;flex-direction:column;gap:10px}
+.form label{display:flex;flex-direction:column;font-size:0.9rem}
+.form input,.form select{padding:10px;border-radius:8px;border:1px solid #eee;margin-top:6px}
+.form-row{display:flex;gap:12px}
+.order-msg{color:green;margin-top:8px}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity 700ms ease, transform 700ms ease}
+.reveal.in-view{opacity:1;transform:none}
+
+/* footer */
+.site-footer{background:#fff;padding:18px 0;border-top:1px solid rgba(107,42,90,0.04)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.socials a{color:var(--muted);text-decoration:none}
+
+/* responsive */
+@media (max-width:880px){
+  .hero-inner{flex-direction:column-reverse;text-align:center}
+  .hero-media{width:220px}
+  .container{padding:18px}
+  .two-col{grid-template-columns:1fr}
+  .nav{display:none}
+  .nav-toggle{display:block}
+}
